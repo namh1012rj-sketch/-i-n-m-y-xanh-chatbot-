@@ -1,0 +1,71 @@
+Khởi tạo Query Engine (Chế độ MongoDB)...
+Khởi tạo xong trong 4.6466s
+Sử dụng sản phẩm mẫu: Jbl 179170 (SKU: 3040875000301) | Nhóm: Micro karaoke
+
+==================================================
+[TEST] 1. tool_query_products (Hybrid Search) (Time: 0.8677s)
+-> Số lượng kết quả: 5
+  1. Tên/Câu hỏi: Boston 179004 | Score: 0.6687
+  2. Tên/Câu hỏi: Birici 178695 | Score: 0.6588
+  3. Tên/Câu hỏi: Ce-Ance 178526 | Score: 0.6531
+
+==================================================
+[TEST] 2. tool_query_similar_products (Vector Similar) (Time: 0.1384s)
+-> Số lượng kết quả: 2
+  1. Tên/Câu hỏi: Jbl 179169 | Score: 0.9851
+  2. Tên/Câu hỏi: Birici 178695 | Score: 0.8901
+
+==================================================
+[TEST] 3. tool_query_faq (Chính sách/Bảo hành) (Time: 0.9368s)
+-> Số lượng kết quả: 3
+  1. Tên/Câu hỏi: Sản phẩm công nghệ viễn thông bảo hành như thế nào? | Score: 0.7305
+  2. Tên/Câu hỏi: Hàng mua về bị lỗi thì có được đổi mới không? | Score: 0.7273
+  3. Tên/Câu hỏi: Phụ kiện như sạc, cáp, tai nghe, sạc dự phòng bảo hành bao lâu? | Score: 0.7169
+
+==================================================
+[TEST] 4. tool_get_product_details (Tìm theo ID) (Time: 0.0754s)
+-> Tên: Jbl 179170 | Giá: 9720000.0
+
+==================================================
+[TEST] 5. tool_search_product_by_name (Tìm bằng tên gốc) (Time: 0.0824s)
+-> Số lượng kết quả: 2
+  1. Tên: Jbl 179170 | Giá: 9720000.0
+  2. Tên: Jbl 179169 | Giá: 8443636.0
+
+==================================================
+[TEST] 6. tool_query_products_by_brand (Tìm bằng tên Hãng) (Time: 0.0617s)
+-> Số lượng kết quả: 2
+  1. Tên: Jbl 179170 | Giá: 9720000.0
+  2. Tên: Jbl 179169 | Giá: 8443636.0
+
+==================================================
+[TEST] 7. tool_query_products_by_spec_range (Diện tích phòng 15-20) (Time: 0.0468s)
+-> Trống (Không tìm thấy kết quả)
+
+==================================================
+[TEST] 8. tool_query_by_features (Tính năng: Inverter) (Time: 0.0479s)
+-> Trống (Không tìm thấy kết quả)
+
+==================================================
+[TEST] 9. tool_sort_products_by_price (Rẻ nhất ASC) (Time: 0.0441s)
+-> Số lượng kết quả: 3
+  1. Tên: Birici 178695 | Giá: 1561091.0
+  2. Tên: Boston 179004 | Giá: 3436364.0
+  3. Tên: Ce-Ance 178526 | Giá: 3878182.0
+
+==================================================
+[TEST] 10. tool_query_discount_products (Giảm giá sâu nhất) (Time: 0.0836s)
+-> Số lượng kết quả: 3
+  1. Tên: Jbl 179170 | Giá: 9720000.0
+  2. Tên: Jbl 179169 | Giá: 8443636.0
+  3. Tên: Boston 179004 | Giá: 3436364.0
+
+==================================================
+[TEST] 11. tool_query_best_promotions (Khuyến mãi khủng) (Time: 0.0624s)
+-> Trống (Không tìm thấy kết quả)
+
+==================================================
+[TEST] 12. tool_query_out_of_stock (Tìm hàng hết kho) (Time: 0.0585s)
+-> Trống (Không tìm thấy kết quả)
+
+--- HOÀN TẤT BỘ TEST TỔNG THỜI GIAN: 2.5064s ---
