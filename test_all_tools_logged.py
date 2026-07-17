@@ -42,7 +42,7 @@ def run_test(title, func, *args, **kwargs):
 if __name__ == '__main__':
     log("Khởi tạo Query Engine (Chế độ MongoDB)...")
     t_start = time.time()
-    engine = QueryEngine('d:/testing/cleaned_data.json')
+    engine = QueryEngine('cleaned_data.json')
     log(f"Khởi tạo xong trong {time.time() - t_start:.4f}s")
     
     sample_product = engine.products[0] if engine.products else {}
@@ -66,6 +66,7 @@ if __name__ == '__main__':
     run_test("10. tool_query_discount_products (Giảm giá sâu nhất)", engine.tool_query_discount_products, category=sample_category, limit=3)
     run_test("11. tool_query_best_promotions (Khuyến mãi khủng)", engine.tool_query_best_promotions, category=sample_category)
     run_test("12. tool_query_out_of_stock (Tìm hàng hết kho)", engine.tool_query_out_of_stock)
+    run_test("13. tool_search_policy_documents (Chính sách văn bản dài)", engine.tool_search_policy_documents, query="bảo hành iPhone khui hộp thế nào")
     
     total_t1 = time.time()
     log(f"\n--- HOÀN TẤT BỘ TEST TỔNG THỜI GIAN: {total_t1 - total_t0:.4f}s ---")

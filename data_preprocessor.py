@@ -205,7 +205,7 @@ class DataPreprocessor:
             }
             try:
                 # time.sleep(1.5) # Removed sleep to optimize speed
-                response = requests.post(EMBEDDING_API_URL, json=payload, headers=headers, timeout=0.5)
+                response = requests.post(EMBEDDING_API_URL, json=payload, headers=headers, timeout=5)
                 response.raise_for_status()
                 data = response.json()
                 # Phân tích cú pháp trả về theo chuẩn OpenAI

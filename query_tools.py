@@ -452,3 +452,45 @@ class QueryEngine:
             results = results[:limit]
             
         return results
+
+    def tool_search_policy_documents(self, query: str) -> List[Dict[str, Any]]:
+        """
+        [NEW TOOL - POLICY VECTOR SEARCH]
+        Tìm kiếm thông tin trong các văn bản chính sách, điều khoản, nội quy, bảo hành.
+        Chỉ dùng khi người dùng hỏi các câu hỏi về chính sách dài hoặc phức tạp.
+        """
+        if self.use_mock or self.preprocessor.db is None:
+            return [{"error": "Tool này chỉ hoạt động khi kết nối với MongoDB Atlas."}]
+            
+        print(f"  [Tool] Gọi API lấy Vector cho câu hỏi chính sách: '{query}'")
+        try:
+            query_vector_list = self.preprocessor._call_embedding_api([query])
+            if not query_vector_list:
+                return [{"error": "Lỗi API embedding"}]
+            query_vector = query_vector_list[0]
+            if not any(query_vector):
+                return [{"error": "Vector rỗng do timeout"}]
+                
+            mongo_query = [
+                {
+                    "$vectorSearch": {
+                        "index": "default",
+                        "path": "embedding",
+                        "queryVector": query_vector,
+                        "numCandidates": 20,
+                        "limit": 2
+                    }
+                },
+                {
+                    "$project": {
+                        "_id": 0,
+                        "embedding": 0,
+                        "score": {"$meta": "vectorSearchScore"}
+                    }
+                }
+            ]
+            
+            results = list(self.preprocessor.db["policy_documents"].aggregate(mongo_query))
+            return results
+        except Exception as e:
+            return [{"error": f"Lỗi truy vấn Vector Policy: {e}"}]

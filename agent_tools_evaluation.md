@@ -1,6 +1,6 @@
 # BÁO CÁO CÔNG CỤ CHO AI AGENT (AGENT TOOLS)
 
-Tài liệu này đánh giá chi tiết 12 công cụ (Tools) (đã loại bỏ các tool cập nhật dữ liệu để đảm bảo an toàn Read-Only) cung cấp cho AI Agent. Các số liệu đánh giá bao gồm đầu vào, đầu ra, và thời gian chạy thực tế đã bao gồm độ trễ mạng (Network Latency) tới MongoDB Atlas và thời gian truy vấn.
+Tài liệu này đánh giá chi tiết 13 công cụ (Tools) (đã loại bỏ các tool cập nhật dữ liệu để đảm bảo an toàn Read-Only) cung cấp cho AI Agent. Các số liệu đánh giá bao gồm đầu vào, đầu ra, và thời gian chạy thực tế đã bao gồm độ trễ mạng (Network Latency) tới MongoDB Atlas và thời gian truy vấn.
 
 > [!NOTE]
 > **Về thời gian phản hồi (Latency):** 
@@ -28,11 +28,15 @@ Tài liệu này đánh giá chi tiết 12 công cụ (Tools) (đã loại bỏ 
 *   **Đầu ra (Outputs):** `List[Tuple[Dict, float]]` - Sản phẩm giống nhất với sản phẩm gốc, lý tưởng để Upsell/Thay thế.
 *   **Thời gian chạy thực tế:** `~0.15s - 0.2s` (Chỉ lấy Vector nội bộ và quét Atlas).
 
-### 1.3. `tool_query_faq` (Tra cứu chính sách/FAQ)
-*   **Đầu vào (Inputs):**
-    *   `raw_query` (str): Câu hỏi chính sách (ví dụ: "Bảo hành mấy tháng?").
-*   **Đầu ra (Outputs):** `List[Tuple[Dict, float]]` - Top 3 chính sách liên quan nhất.
-*   **Thời gian chạy thực tế:** `~0.9s` (Gồm độ trễ gọi API Embedding và quét Atlas).
+### 1.3. `tool_query_faq` (Trả lời câu hỏi thường gặp)
+*   **Đầu vào (Inputs):** `raw_query` (str) - Câu hỏi FAQ.
+*   **Đầu ra (Outputs):** `List[Tuple[Dict, float]]` - Câu trả lời phù hợp.
+*   **Thời gian chạy thực tế:** `~0.9s`.
+
+### 1.4. `tool_search_policy_documents` (Tra cứu Quy định, Chính sách Dài)
+*   **Đầu vào (Inputs):** `query` (str) - Câu hỏi hoặc chủ đề cần tra cứu (VD: "Bảo hành iPhone khui hộp", "Chính sách đổi trả máy lạnh").
+*   **Đầu ra (Outputs):** `List[Dict]` - Các đoạn văn bản chính sách liên quan nhất trích xuất từ dữ liệu Markdown phi cấu trúc.
+*   **Thời gian chạy thực tế:** `~0.9s`. (Gồm độ trễ gọi API Embedding và quét Atlas).
 
 ---
 

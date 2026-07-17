@@ -12,7 +12,7 @@ Tài liệu này là đặc tả chi tiết về Định dạng dữ liệu, Cá
 *   **Sản phẩm (Products):** Tổng cộng **5198** sản phẩm được lưu dưới định dạng **JSON Dictionaries**.
     *   *Các trường (Fields) chính:* Tên, Mã SKU (chuỗi), Thương hiệu, Giá gốc (`float`), Giá khuyến mãi (`float`), Danh mục (Máy lạnh, Tủ lạnh, v.v.), Quà tặng/Khuyến mãi (chuỗi), và bảng Cấu hình (`specs` - dạng Dictionary JSON lồng nhau).
 *   **Câu hỏi chính sách (FAQ):** Dữ liệu câu hỏi đáp chuyên sâu định dạng JSON.
-    *   *Các trường chính:* Câu hỏi, Nội dung câu trả lời, Nhãn danh mục (Category).
+*   **Văn bản Chính sách (Policy Docs):** Các văn bản nội quy, chính sách dài dạng Markdown (phi cấu trúc) được chia nhỏ (Chunking) theo đoạn văn.
 *   **Vector Embeddings:** Mảng số thực độ dài cố định **1024 chiều** (`List[float]`) được sinh ra từ mô hình `Vietnamese_Embedding`.
 
 ### 1.2 Các bước Chuẩn hóa dữ liệu (Normalization Steps)
@@ -31,7 +31,7 @@ Tài liệu này là đặc tả chi tiết về Định dạng dữ liệu, Cá
 
 ## 2. THUẬT TOÁN CỦA CÁC QUERY TOOLS (QUERY ENGINE)
 
-Bộ 12 công cụ truy vấn (đã loại trừ công cụ ghi chú) được chia thành 3 thuật toán chính.
+Bộ 13 công cụ truy vấn (đã loại trừ công cụ ghi chú) được chia thành 3 thuật toán chính.
 
 ### 2.1 Thuật toán Tìm kiếm Lai (Hybrid Search / Atlas Vector Search)
 Hoạt động trên cơ sở so sánh độ đo Cosine Similarity giữa Vector câu hỏi và Vector trong Database.
