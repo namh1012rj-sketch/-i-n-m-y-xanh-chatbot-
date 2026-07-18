@@ -1,0 +1,335 @@
+============================================================
+BẮT ĐẦU CHẠY BATCH TEST & MEMORY TEST (DeepSeek-V4-Flash)
+============================================================
+
+--- 1. BATCH TEST TOOL COVERAGE ---
+
+[1/12] Khách: Xin chào shop
+Agent: Dạ chào anh/chị! Em là nhân viên tư vấn của Điện Máy Xanh đây ạ. 
+
+Em có thể giúp gì cho anh/chị hôm nay? Anh/chị đang quan tâm tới sản phẩm gì không ạ? 😊
+--> [Thời gian xử lý: 2.13s]
+
+[2/12] Khách: Tư vấn cho mình cái máy lạnh
+Agent: Dạ chào anh/chị! Cảm ơn anh/chị đã quan tâm đến máy lạnh bên Điện Máy Xanh ạ.
+
+Để em tư vấn chính xác nhất, anh/chị cho em hỏi vài thông tin nhỏ nha:
+
+1. **Phòng anh/chị định lắp máy lạnh có diện tích khoảng bao nhiêu mét vuông ạ?** (Ví dụ: phòng ngủ tầm 15m², phòng khách 25m²,...)
+2. **Anh/chị có ưu tiên máy tiết kiệm điện (Inverter) không?**
+3. **Phòng mình có đặc điểm gì đặc biệt không ạ?** (Ví dụ: hướng Tây nắng nóng, có trẻ nhỏ/người già, hay cần máy lọc không khí,...)
+
+Từ đó em sẽ gợi ý dòng máy phù hợp nhất cho anh/chị ạ! 😊
+--> [Thời gian xử lý: 3.21s]
+
+[3/12] Khách: Mình muốn mua máy tính để chơi game Genshin Impact mượt mà
+Agent: Dạ chào anh/chị! Em rất vui được tư vấn máy tính chơi Genshin Impact cho mình ạ.
+
+Trước tiên, em xin phép hỏi anh/chị muốn mua **Laptop** (xách tay) hay **PC** (máy bàn) ạ? Và ngân sách dự kiến của mình khoảng bao nhiêu để em tra cứu những mẫu phù hợp nhất nhé!
+
+Em cũng xin phép tra cứu thử các dòng máy đang có tại Điện Máy Xanh phù hợp chơi Genshin Impact trước ạ.
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 8.56s]
+
+[4/12] Khách: Cho mình xin thông tin con SingPC
+Agent: 
+
+
+[Agent đang tra cứu Database (tool_search_product_by_name)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 4.69s]
+
+[5/12] Khách: Mình thích máy lạnh của hãng Daikin
+Agent: Dạ chào anh/chị! Em cảm ơn đã quan tâm đến máy lạnh Daikin - một thương hiệu rất uy tín về độ bền và tiết kiệm điện ạ.
+
+Để em xem qua các mẫu Daikin bên em đang có trước nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+Dạ, em cảm ơn anh/chị đã quan tâm đến máy lạnh Daikin! Bên em đang có rất nhiều mẫu Daikin Inverter chính hãng với đa dạng công suất. 
+
+Để em tư vấn phù hợp nhất, anh/chị cho em hỏi trước nhé:
+
+**1. Phòng của mình rộng khoảng bao nhiêu mét vuông ạ?** (Vì sẽ quyết định công suất máy phù hợp)
+- Dưới 15m² → Máy 1 HP (9.000 BTU)
+- 15 - 20m² → Máy 1.5 HP (12.000 BTU)
+- 20 - 30m² → Máy 2 HP (18.000 BTU)
+- 30 - 40m² → Máy 2.5 HP
+- Trên 40m² → Máy 3 HP
+
+**2. Anh/chị có cần máy 2 chiều (có sưởi ấm) hay chỉ cần 1 chiều làm lạnh thôi ạ?**
+
+**3. Ngân sách dự kiến khoảng bao nhiêu để em lọc ra mẫu phù hợp nhất?**
+
+Em xin gợi ý nhanh một số mẫu Daikin đang bán chạy:
+
+📌 **Phân khúc tiết kiệm (giá tốt):**
+- **Daikin ATKB25ZVMV** (1 HP) - chỉ **10.990.000đ** - Hàng mới 2025, bảo hành 2 năm
+- **Daikin ATKB35ZVMV** (1.5 HP) - **13.490.000đ** - Rất được ưa chuộng
+
+📌 **Phân khúc cao cấp (nhiều công nghệ):**
+- **Daikin FTKY25ZVMV** (1 HP) - **12.390.000đ** (giảm còn **12.390.000đ**) - Có WiFi, điều khiển bằng điện thoại
+- **Daikin FTKY35ZVMV** (1.5 HP) - **15.390.000đ** (giảm 500k) - Có WiFi, cảm biến khử ẩm
+
+📌 **Dòng 2 chiều (có sưởi):**
+- **Daikin FTHF35XVMV** (1.5 HP) - **15.590.000đ** - Vừa lạnh vừa sưởi ấm mùa đông
+
+Anh/chị cho em biết thêm thông tin về diện tích phòng và nhu cầu để em tư vấn chính xác nhất nhé! 😊
+--> [Thời gian xử lý: 39.83s]
+
+[6/12] Khách: Cho xem top 3 điện thoại rẻ nhất
+Agent: Dạ, em xin phép tra cứu danh sách điện thoại giá rẻ nhất cho anh/chị tham khảo ngay ạ!
+
+
+[Agent đang tra cứu Database (tool_sort_products_by_price)]
+Dạ, em xin gửi anh/chị **Top 3 điện thoại giá rẻ nhất** tại Điện Máy Xanh hiện tại ạ:
+
+---
+
+**🥇 1. Điện thoại Mobell M179 — 410.000₫**
+- Màn hình 1.77", pin 1000 mAh, hỗ trợ 4G, cổng Type-C
+- Có đèn pin, radio, nghe nhạc MP3
+- ✅ **Rẻ nhất, cơ bản đầy đủ, pin trâu**
+
+**🥈 2. Điện thoại Mobell M239 4G — 430.000₫**
+- Màn hình 1.77", pin 1000 mAh, 4G VoLTE
+- Có camera sau 0.08 MP, đèn pin, radio
+- ✅ **Giá chỉ nhỉnh hơn 20k nhưng có thêm camera**
+
+**🥉 3. Điện thoại Masstel IZI 10 4G Type-C — 430.000₫**
+- RAM 48 MB, bộ nhớ 128 MB (rộng rãi hơn)
+- Nghe đài FM không cần tai nghe, pin 1000 mAh
+- ✅ **Bộ nhớ lớn nhất trong 3 máy, phù hợp lưu danh bạ nhiều**
+
+---
+
+Cả 3 máy đều là điện thoại **cục gạch** cơ bản, dùng nghe gọi, nhắn tin, nghe radio, rất phù hợp cho người lớn tuổi hoặc làm máy phụ ạ.
+
+Anh/chị có cần em tư vấn thêm về dòng smartphone giá rẻ (cảm ứng) không hay mình chốt 1 trong 3 máy trên ạ? 😊
+--> [Thời gian xử lý: 74.20s]
+
+[7/12] Khách: Laptop nào đang giảm giá sâu nhất
+Agent: 
+
+
+[Agent đang tra cứu Database (tool_query_discount_products)]
+Dạ, em vừa tra cứu và thấy các mẫu laptop đang **giảm giá cực sâu** tại Điện Máy Xanh, anh/chị tham khảo top 3 nổi bật nhất nhé:
+
+---
+
+🔥 **1. Laptop Lenovo Gaming LOQ 15IRX9** (Giảm sốc nhất: **15,5 triệu**)
+- Giá gốc: **42.990.000đ** → Giảm còn **27.490.000đ**
+- CPU i5 13450HX, RAM 16GB, SSD 1TB, RTX 3050 6GB, màn 15.6" 144Hz
+- 🎁 Kèm nhiều quà tặng: PMH 900k, balo, giảm thêm 700k...
+
+🔥 **2. Laptop Lenovo Gaming LOQ Essential 15IRX11** (Giảm **13,5 triệu**)
+- Giá gốc: **45.990.000đ** → Giảm còn **32.490.000đ**
+- i5 13450HX, RAM 16GB, SSD 1TB, **RTX 5050 8GB** (đời mới hơn), màn 144Hz
+
+🔥 **3. Laptop Acer Predator Helios Neo 16** (Giảm **12 triệu**)
+- Nhiều phiên bản từ **49.990.000đ - 59.990.000đ**
+- i7 14650HX, RAM 32GB, RTX 5050/5060, màn 16" 180Hz siêu mượt
+
+---
+
+**👉 Tóm lại:** Nếu anh/chị muốn **rẻ nhất và giảm nhiều nhất**, em thấy **Lenovo LOQ 15IRX9** chỉ còn **27,4 triệu** là quá hời cho một con gaming chiến game tốt ạ!
+
+Anh/chị có muốn em tư vấn thêm về nhu cầu sử dụng (chơi game, làm việc văn phòng hay đồ họa) để chọn được máy ưng ý nhất không ạ? 😊
+--> [Thời gian xử lý: 5.29s]
+
+[8/12] Khách: Tủ lạnh có làm đá tự động không
+Agent: 
+
+
+[Agent đang tra cứu Database (tool_query_by_features)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+
+--> [Thời gian xử lý: 42.15s]
+
+[9/12] Khách: Máy lạnh cho phòng khoảng 15 mét vuông
+Agent: Dạ chào anh/chị! Phòng 15 mét vuông thì máy lạnh 9.000 BTU (1 HP) là phù hợp nhất rồi ạ. Tuy nhiên nếu phòng có hướng Tây nắng nóng hoặc đông người thì có thể cân nhắc lên 12.000 BTU (1.5 HP) cho mát nhanh hơn.
+
+Để em tra cứu các mẫu máy lạnh phù hợp cho anh/chị tham khảo trước nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products_by_spec_range)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 69.30s]
+
+[10/12] Khách: Chính sách bảo hành tivi bên mình như nào
+Agent: Dạ, em xin phép tra cứu chính sách bảo hành tivi bên mình cho anh/chị tham khảo ngay ạ!
+
+
+[Agent đang tra cứu Database (tool_search_policy_documents)]
+  [Tool] Gọi API lấy Vector cho câu hỏi chính sách: 'chính sách bảo hành tivi'
+
+[Agent đang tra cứu Database (tool_query_faq)]
+Dạ, em xin tổng hợp chính sách bảo hành tivi bên Điện Máy Xanh cho anh/chị tham khảo ạ:
+
+**1. Thời gian bảo hành:**
+- Tivi được bảo hành **chính hãng** theo quy định của từng hãng (thường từ **12 - 24 tháng** tùy dòng sản phẩm và thương hiệu).
+
+**2. Bảo hành tận nhà:**
+- Tivi thuộc nhóm điện máy lớn nên được **bảo hành tận nhà** hoàn toàn miễn phí. Anh/chị chỉ cần gọi tổng đài, kỹ thuật viên của hãng sẽ đến tận nơi kiểm tra trong vòng **24h - 48h**, không cần phải mang ra siêu thị ạ.
+
+**3. Hỗ trợ tiếp nhận:**
+- Nếu cần, anh/chị có thể mang tivi ra **bất kỳ siêu thị Điện Máy Xanh nào trên toàn quốc**, bên em sẽ tiếp nhận và gửi đi bảo hành giúp mình hoàn toàn miễn phí luôn ạ.
+
+Anh/chị đang quan tâm đến mẫu tivi nào để em tư vấn thêm về giá và khuyến mãi cho mình ạ? 😊
+--> [Thời gian xử lý: 9.97s]
+
+[11/12] Khách: Có sản phẩm nào đang hết hàng không
+Agent: 
+
+
+[Agent đang tra cứu Database (tool_query_out_of_stock)]
+Dạ, hiện tại theo hệ thống của em kiểm tra thì **không có sản phẩm nào đang hết hàng** ạ! Tất cả các mặt hàng tại Điện Máy Xanh đều còn đủ để phục vụ anh/chị.
+
+Anh/chị đang quan tâm tới sản phẩm gì để em tư vấn giúp mình ạ? 😊
+--> [Thời gian xử lý: 2.69s]
+
+[12/12] Khách: Tìm cho mình các sản phẩm tương tự con điện thoại mã IPH-15-PRO-MAX-1T-TITAN
+Agent: Dạ, em xin phép tra cứu các sản phẩm tương tự với mã IPH-15-PRO-MAX-1T-TITAN (iPhone 15 Pro Max 1TB Titan) giúp anh/chị ngay ạ!
+
+
+[Agent đang tra cứu Database (tool_query_similar_products)]
+Dạ, để em thử tìm kiếm thông tin sản phẩm này trước nha!
+
+
+[Agent đang tra cứu Database (tool_search_product_by_name)]
+Dạ, để em tìm rộng hơn các dòng iPhone 15 Pro Max đang có tại Điện Máy Xanh ạ!
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 67.81s]
+
+
+--- 2. SESSION MEMORY TEST (MULTI-TURN) ---
+
+[Turn 1] Khách: Tư vấn cho mình cái tủ lạnh
+Agent: Dạ chào anh/chị! Em cảm ơn đã quan tâm đến tủ lạnh bên Điện Máy Xanh ạ.
+
+Để em tư vấn được mẫu ưng ý nhất, anh/chị cho em hỏi chút thông tin với ạ:
+
+1. **Nhà mình có bao nhiêu người** để em xác định dung tích tủ phù hợp ạ? (VD: 2-3 người thì tầm 200-300 lít, 4-5 người thì 350-450 lít)
+2. **Anh/chị thích kiểu dáng nào hơn?** Tủ lạnh ngăn đá trên/dưới truyền thống, hay dạng Side-by-side (2 cánh to), hay Multi-door (nhiều cánh) cho sang trọng ạ?
+3. **Có ưu tiên gì đặc biệt không ạ?** Ví dụ như cần tiết kiệm điện (Inverter), có làm đá tự động, hay ngăn cấp đông mềm để giữ thịt cá tươi lâu?
+
+Anh/chị chia sẻ thêm để em tìm mẫu ưng ý nhất giúp mình nhé! 😊
+--> [Thời gian xử lý: 3.42s]
+
+[Turn 2] Khách: Mình mua cho gia đình 4 người dùng
+Agent: Dạ, gia đình 4 người thì em nghĩ tủ tầm **350 - 450 lít** là vừa xinh ạ! Để em xem qua các mẫu đang có bên mình trước nhé.
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 9.12s]
+
+[Turn 3] Khách: Ngân sách của mình là dưới 15 triệu
+Agent: 
+[Lỗi kết nối FPT API: Error code: 400 - {'subcode': 400000, 'message': 'Bad request', 'description': "This model's maximum context length is 500000 tokens. However, your messages resulted in 1107464 tokens. Please reduce the length of the messages.", 'code': 400}]
+
+--> [Thời gian xử lý: 4.79s]
+
+[Turn 4] Khách: Cho mình lấy con thứ 2 nhé
+Agent: 
+[Lỗi kết nối FPT API: Error code: 400 - {'message': 'Bad request', 'description': "This model's maximum context length is 500000 tokens. However, your messages resulted in 1107295 tokens. Please reduce the length of the messages.", 'subcode': 400000, 'code': 400}]
+
+--> [Thời gian xử lý: 3.62s]

@@ -13,3 +13,8 @@ python-dotenv>=1.0.0
 
 # (Tùy chọn) Thư viện Google Gemini để chạy LLM Agent Prototype
 google-generativeai>=0.4.0
+openai>=1.12.0
+
+# Server API & Streaming
+fastapi>=0.111.0
+uvicorn>=0.30.0

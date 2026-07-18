@@ -57,6 +57,11 @@ class DataPreprocessor:
                             p["specs"][k + "_numeric"] = val
                         except ValueError:
                             pass
+            
+            # Tính sẵn discount_amount
+            orig_price = p.get("original_price", 0) or 0
+            sale_price = p.get("sale_price", 0) or 0
+            p["discount_amount"] = orig_price - sale_price
         
         # Nạp dữ liệu và đồng bộ vào MongoDB (nếu khả dụng) hoặc dùng bộ nhớ đệm
         self.products = []
@@ -172,10 +177,18 @@ class DataPreprocessor:
                 scen_col.insert_many(self.raw_data["scenarios"])
                 print("[MongoDB] Đã tự động import bảng 'scenarios' vào Database.")
 
-            # Lấy dữ liệu thực tế từ MongoDB ra bộ nhớ để chạy runtime (KHÔNG tải Vector để tiết kiệm RAM)
+            # Lấy dữ liệu thực tế từ MongoDB ra bộ nhớ để chạy runtime
+            # Sản phẩm (13.7k) bỏ qua Vector để tiết kiệm RAM
             self.products = list(prod_col.find({}, {"embedding": 0}))
-            self.faq = list(faq_col.find({}, {"embedding": 0}))
+            # FAQ (21 docs) tải luôn Vector vào RAM vì rất nhẹ
+            self.faq = list(faq_col.find({}))
             self.scenarios = list(scen_col.find({}, {"embedding": 0}))
+            
+            # Khởi tạo ma trận Vector cho FAQ ngay trên RAM
+            if self.faq and "embedding" in self.faq[0]:
+                self.faq_tfidf_matrix = np.array([f["embedding"] for f in self.faq if "embedding" in f])
+            else:
+                self.faq_tfidf_matrix = None
             
         except Exception as e:
             print(f"[Hệ thống dữ liệu] Lỗi khi đồng bộ dữ liệu MongoDB: {e}. Chuyển sang MOCK DB dự phòng.")

@@ -1,0 +1,310 @@
+============================================================
+BẮT ĐẦU CHẠY BATCH TEST & MEMORY TEST (DeepSeek-V4-Flash)
+============================================================
+
+--- 1. BATCH TEST TOOL COVERAGE ---
+
+[1/12] Khách: Xin chào shop
+Agent: Dạ chào anh/chị! Em là nhân viên tư vấn của Điện Máy Xanh đây ạ. 
+
+Em có thể giúp gì cho anh/chị hôm nay? Anh/chị đang quan tâm tới sản phẩm gì không ạ? 😊
+--> [Thời gian xử lý: 62.73s]
+
+[2/12] Khách: Tư vấn cho mình cái máy lạnh
+Agent: Dạ chào anh/chị! Em cảm ơn đã quan tâm đến máy lạnh bên Điện Máy Xanh ạ.
+
+Để em tư vấn được mẫu phù hợp nhất, anh/chị cho em hỏi trước vài thông tin nhỏ nha:
+
+1. **Phòng anh/chị định lắp có diện tích khoảng bao nhiêu mét vuông** ạ? (Ví dụ: phòng ngủ 15m², phòng khách 25m²...)
+2. **Anh/chị có ưu tiên máy tiết kiệm điện (Inverter)** không, hay để em tư vấn cả hai dòng?
+3. **Có yếu tố đặc biệt nào không ạ?** Ví dụ như phòng hướng Tây hay bị nắng nóng, nhà có trẻ nhỏ/người già cần máy êm và lọc không khí tốt...
+
+Anh/chị cho em biết thêm để em tìm mẫu ưng ý nhất nhé! 😊
+--> [Thời gian xử lý: 3.14s]
+
+[3/12] Khách: Mình muốn mua máy tính để chơi game Genshin Impact mượt mà
+Agent: Dạ chào anh/chị! Chơi Genshin Impact mượt mà thì cần một em máy có card đồ họa rời tầm trung một tí là ổn áp rồi ạ. 😊
+
+Cho em hỏi trước giúp em với:
+
+1. **Anh/chị muốn mua Laptop (xách tay) hay PC (máy bàn)** ạ?
+2. **Ngân sách dự kiến** của mình khoảng bao nhiêu?
+3. Có **thương hiệu nào** anh/chị ưng trước không?
+
+Trong lúc đó, em xin phép thử tìm vài mẫu phù hợp cho anh/chị tham khảo trước nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 5.86s]
+
+[4/12] Khách: Cho mình xin thông tin con SingPC
+Agent: Dạ, để em tra cứu thông tin sản phẩm SingPC cho anh/chị ngay nhé!
+
+
+[Agent đang tra cứu Database (tool_search_product_by_name)]
+Dạ, SingPC là một thương hiệu thiết bị công nghệ của Việt Nam, bên em đang có khá nhiều sản phẩm của hãng này. Em xin tóm tắt các nhóm sản phẩm chính cho anh/chị dễ hình dung nhé:
+
+---
+
+### 🖥️ **PC Desktop (Máy tính để bàn)**
+| Sản phẩm | Giá gốc | Giá KM |
+|---|---|---|
+| **SingPC R54M495SF-W** (R5 4650G/16GB/512GB) | 12tr | **10.990.000đ** |
+| **SingPC R56M595SF-W** (R5 5600GT/16GB/512GB) | 15,8tr | **12.990.000đ** |
+| **SingPC i713H695SF-W** (i7 13620H/16GB/512GB) | 19,5tr | **18.090.000đ** |
+| **SingPC i512H682SF-W** (i5 12450H/8GB/256GB) | 13,3tr | **11.990.000đ** |
+
+👉 *Đều kèm chuột + bàn phím không dây, Win 11 Pro, tặng thêm Bộ lưu điện 500.000đ*
+
+---
+
+### 🖥️ **Màn hình SingPC**
+| Sản phẩm | Giá KM |
+|---|---|
+| **Q27CF120-VAG** (27" Cong, 120Hz, VA) | **2.290.000đ** |
+| **Q25F100-IPS** (24.5" IPS, 100Hz, 1ms) | **1.790.000đ** |
+| **P27F100-IPS** (27" IPS, 100Hz) | **1.990.000đ** |
+| **P24F100-IPS** (23.8" IPS, 100Hz) | **1.690.000đ** |
+| **P22F100-IPS** (21.5" IPS, 100Hz) | **1.490.000đ** |
+
+---
+
+### 📦 **Các dòng khác**
+- **MiniPC** (gọn nhẹ): từ **11.290.000đ** (i5 12450H) đến **17.790.000đ** (Ultra 7)
+- **Máy in nhiệt**: từ **790.000đ** (Print-211) đến **1.790.000đ** (Print-371/311)
+- **Máy quét mã vạch**: từ **790.000đ** (Scan-2623U) đến **1.490.000đ** (Scan-2800U)
+- **AIO (All-in-One)**: từ **11.790.000đ** đến **19.490.000đ**
+
+---
+
+Dạ anh/chị muốn tìm hiểu kỹ hơn về dòng nào ạ? Em có
+--> [Thời gian xử lý: 7.50s]
+
+[5/12] Khách: Mình thích máy lạnh của hãng Daikin
+Agent: 
+
+Dạ chào anh/chị! Em rất vui được tư vấn về máy lạnh Daikin cho mình ạ. Trước tiên, em xin phép tra cứu các sản phẩm Daikin bên em đang có nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+Dạ, bên em có rất nhiều dòng máy lạnh Daikin để anh/chị lựa chọn đó ạ! Để em tư vấn chính xác nhất, anh/chị cho em hỏi thêm vài thông tin nhỏ nha:
+
+1. **Diện tích phòng** anh/chị định lắp khoảng bao nhiêu m2 ạ? (Ví dụ: dưới 15m2 thì chọn 1 HP, 15-20m2 thì 1.5 HP, 20-30m2 thì 2 HP...)
+2. **Anh/chị có nhu cầu máy 1 chiều** (chỉ làm lạnh) **hay 2 chiều** (có cả sưởi ấm mùa đông)?
+3. **Ngân sách** anh/chị dự tính khoảng bao nhiêu?
+
+Em xin gợi ý sơ qua vài mẫu Daikin đang hot nhé:
+
+🔥 **Dòng cao cấp FTKM (đời 2026 - mới nhất, sx Thái Lan):**
+- **1 HP** (dưới 15m²) – **13.590.000đ** – siêu êm chỉ 18dB, có WiFi điều khiển từ xa
+- **1.5 HP** (15-20m²) – **16.990.000đ** – lọc bụi mịn PM2.5, Streamer khử khuẩn
+
+🔥 **Dòng giá tốt ATKB/ATKF (sx Việt Nam, bảo hành 2 năm cục lạnh):**
+- **1 HP ATKB25ZVMV** – chỉ **10.990.000đ** (cơ bản, tiết kiệm)
+- **1.5 HP ATKF35ZVMV** – đang giảm còn **13.990.000đ** (có WiFi, lọc PM2.5, Streamer)
+
+Anh/chị cho em biết thêm thông tin để em chốt mẫu ưng ý nhất nhé ạ! 😊
+--> [Thời gian xử lý: 7.51s]
+
+[6/12] Khách: Cho xem top 3 điện thoại rẻ nhất
+Agent: Dạ, em xem ngay cho anh/chị top điện thoại giá rẻ nhất hiện tại ạ!
+
+
+[Agent đang tra cứu Database (tool_sort_products_by_price)]
+Dạ, đây là **top 3 điện thoại giá rẻ nhất** hiện tại bên em ạ:
+
+---
+
+**🥇 1. Điện thoại Mobell M179** — **410.000đ**
+- Màn hình 1.77", RAM 16MB, bộ nhớ 16MB
+- Hỗ trợ 4G, 2 Nano SIM, pin 1000mAh
+- Có đèn pin, radio, cổng Type-C
+- 📌 *Cơ bản nhất, gọi nghe + nghe đài, pin trâu*
+
+**🥈 2. Điện thoại Masstel IZI 10 4G Type-C** — **430.000đ**
+- RAM 48MB (cao hơn), bộ nhớ 128MB
+- Hỗ trợ 4G VoLTE, radio FM không cần tai nghe
+- Pin 1000mAh, cổng Type-C, có jack 3.5mm
+- 📌 *Lưu danh bạ được 2000 số, lưu trữ nhỉnh hơn tí*
+
+**🥉 3. Điện thoại Mobell M239 4G** — **430.000đ**
+- Có camera sau 0.08MP (chụp được cơ bản)
+- Hỗ trợ 4G VoLTE, đèn pin, radio
+- Pin 1000mAh, cổng Type-C
+- 📌 *Có thêm camera chụp ảnh, dày hơn chút*
+
+---
+
+Cả 3 máy đều là **điện thoại phổ thông (cục gạch)** dùng để nghe gọi, nhắn tin, pin trâu, phù hợp cho người lớn tuổi hoặc làm máy phụ ạ.
+
+Anh/chị có cần em tư vấn thêm dòng nào không? Hay anh/chị muốn xem **smartphone giá rẻ** luôn ạ? 😊
+--> [Thời gian xử lý: 4.50s]
+
+[7/12] Khách: Laptop nào đang giảm giá sâu nhất
+Agent: Dạ, em xin phép tra cứu danh sách laptop đang giảm giá sâu nhất tại Điện Máy Xanh cho anh/chị tham khảo ngay ạ!
+
+
+[Agent đang tra cứu Database (tool_query_discount_products)]
+Dạ, em xin gửi anh/chị **Top laptop đang giảm giá sâu nhất** tại Điện Máy Xanh hiện tại ạ:
+
+---
+
+### 🥇 Giảm sốc nhất: **Lenovo Gaming LOQ 15IRX9**
+- **Giá gốc:** 42.990.000đ → **Giảm còn: 27.490.000đ** (Giảm tới **15,5 triệu!**)
+- CPU i5 13450HX, RAM 16GB, SSD 1TB, RTX 3050 6GB, màn 15.6" 144Hz
+- Cấu hình chơi game, làm đồ họa ngon lành, giá lại cực hời
+
+### 🥈 **Lenovo Gaming LOQ Essential 15IRX11**
+- **Giá gốc:** 45.990.000đ → **Giảm còn: 32.490.000đ** (Giảm **13,5 triệu**)
+- i5 13450HX, RTX 5050 8GB (đời mới hơn), RAM 16GB, SSD 1TB
+
+### 🥉 **Acer Predator Helios Neo 16** (nhiều phiên bản)
+- Giảm **12 triệu** đồng, giá từ 49.990.000đ - 59.990.000đ
+- Màn 16" 180Hz, cấu hình từ i5/i7, RTX 5050/5060, RAM 32GB
+
+---
+
+**Anh/chị có nhu cầu dùng laptop chủ yếu để làm gì ạ?** (chơi game, học tập văn phòng hay đồ họa?) Em sẽ tư vấn mẫu phù hợp nhất cho mình nha! 😊
+--> [Thời gian xử lý: 5.68s]
+
+[8/12] Khách: Tủ lạnh có làm đá tự động không
+Agent: Dạ chào anh/chị! Em có thể tư vấn ngay về tủ lạnh có làm đá tự động ạ. Để em tra cứu danh sách các mẫu đang có bên em nhé!
+
+
+[Agent đang tra cứu Database (tool_query_by_features)]
+Dạ, để em thử tìm với từ khóa rộng hơn nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 4.36s]
+
+[9/12] Khách: Máy lạnh cho phòng khoảng 15 mét vuông
+Agent: Dạ, phòng 15 mét vuông thì em tư vấn anh/chị nên chọn máy lạnh có công suất **1 HP (9000 BTU)** hoặc **1.5 HP (12000 BTU)** đều phù hợp ạ. Để em tra cứu thử các mẫu đang bán chạy cho anh/chị tham khảo trước nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products_by_spec_range)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 7.22s]
+
+[10/12] Khách: Chính sách bảo hành tivi bên mình như nào
+Agent: Dạ, em xin phép tra cứu chính sách bảo hành tivi bên mình cho anh/chị tham khảo ngay nhé!
+
+
+[Agent đang tra cứu Database (tool_query_faq)]
+
+[Agent đang tra cứu Database (tool_search_policy_documents)]
+
+
+
+[Agent đang tra cứu Database (tool_query_faq)]
+
+
+
+[Agent đang tra cứu Database (tool_query_faq)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 8.56s]
+
+[11/12] Khách: Có sản phẩm nào đang hết hàng không
+Agent: 
+
+
+[Agent đang tra cứu Database (tool_query_out_of_stock)]
+Dạ, hiện tại hệ thống của em không ghi nhận sản phẩm nào đang hết hàng cả anh/chị ạ. Các sản phẩm bên em đều còn hàng sẵn sàng để giao ngay.
+
+Anh/chị đang quan tâm tới sản phẩm gì để em kiểm tra thông tin cụ thể giúp mình nhé? 😊
+--> [Thời gian xử lý: 2.71s]
+
+[12/12] Khách: Tìm cho mình các sản phẩm tương tự con điện thoại mã IPH-15-PRO-MAX-1T-TITAN
+Agent: Dạ, em xin phép tìm kiếm thông tin sản phẩm này trước để tra cứu chính xác nhé ạ!
+
+
+[Agent đang tra cứu Database (tool_search_product_by_name)]
+Dạ, em thử tìm với tên khác nhé ạ!
+
+
+[Agent đang tra cứu Database (tool_search_product_by_name)]
+Dạ, em đã tìm kiếm nhưng mã **"IPH-15-PRO-MAX-1T-TITAN"** hiện không có trong hệ thống của bên em ạ. Có thể mã này chưa được cập nhật hoặc không chính xác.
+
+Tuy nhiên, em xin phép tìm các dòng điện thoại cao cấp tương tự để anh/chị tham khảo nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 5.69s]
+
+
+--- 2. SESSION MEMORY TEST (MULTI-TURN) ---
+
+[Turn 1] Khách: Tư vấn cho mình cái tủ lạnh
+Agent: Dạ chào anh/chị! Em cảm ơn đã quan tâm đến tủ lạnh bên Điện Máy Xanh ạ!
+
+Để em tư vấn được mẫu ưng ý nhất, anh/chị cho em hỏi chút thông tin với ạ:
+
+1. **Nhà mình có bao nhiêu người** để em xác định dung tích tủ phù hợp? (VD: 2-3 người thì tầm 200-300 lít, 4-5 người thì 350-500 lít ạ)
+2. **Anh/chị thích kiểu dáng nào hơn?** Tủ ngăn đá trên truyền thống, ngăn đá dưới, hay dạng Side-by-side (2 cánh to) hoặc Multi-door (nhiều cánh) cho sang trọng?
+3. **Ngân sách dự kiến** của anh/chị khoảng bao nhiêu để em lọc ra những mẫu phù hợp nhất ạ?
+
+Anh/chị cho em xin tí thông tin để em tìm giúp mình nhé! 😊
+--> [Thời gian xử lý: 2.91s]
+
+[Turn 2] Khách: Mình mua cho gia đình 4 người dùng
+Agent: Dạ, gia đình 4 người thì em nghĩ tủ lạnh tầm **350 - 500 lít** là vừa đẹp ạ! 
+
+Em xin phép tra cứu thử vài mẫu đang bán chạy cho anh/chị tham khảo trước nhé!
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+[Hệ thống quá tải, tự ngắt Tool để đảm bảo độ trễ < 5s]
+--> [Thời gian xử lý: 5.01s]
+
+[Turn 3] Khách: Ngân sách của mình là dưới 15 triệu
+Agent: 
+
+
+[Agent đang tra cứu Database (tool_query_products)]
+
+
+
+[Agent đang tra cứu Database (tool_query_products_by_brand)]
+
+--> [Thời gian xử lý: 9.04s]
+
+[Turn 4] Khách: Cho mình lấy con thứ 2 nhé
+Agent: Dạ, anh/chị cho em hỏi là anh/chị đang nói đến sản phẩm nào vậy ạ? Vì em ch
+--> [Thời gian xử lý: 6.36s]

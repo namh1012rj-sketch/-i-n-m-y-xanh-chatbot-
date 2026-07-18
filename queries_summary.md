@@ -9,7 +9,7 @@ Tài liệu này là đặc tả chi tiết về Định dạng dữ liệu, Cá
 `DataPreprocessor` là thành phần xử lý đầu vào, tự động phân tích và nhúng Vector lên MongoDB.
 
 ### 1.1 Khối lượng và Cấu trúc Dữ liệu (Data Formats)
-*   **Sản phẩm (Products):** Tổng cộng **5198** sản phẩm được lưu dưới định dạng **JSON Dictionaries**.
+*   **Sản phẩm (Products):** Tổng cộng **13754** sản phẩm được lưu dưới định dạng **JSON Dictionaries**.
     *   *Các trường (Fields) chính:* Tên, Mã SKU (chuỗi), Thương hiệu, Giá gốc (`float`), Giá khuyến mãi (`float`), Danh mục (Máy lạnh, Tủ lạnh, v.v.), Quà tặng/Khuyến mãi (chuỗi), và bảng Cấu hình (`specs` - dạng Dictionary JSON lồng nhau).
 *   **Câu hỏi chính sách (FAQ):** Dữ liệu câu hỏi đáp chuyên sâu định dạng JSON.
 *   **Văn bản Chính sách (Policy Docs):** Các văn bản nội quy, chính sách dài dạng Markdown (phi cấu trúc) được chia nhỏ (Chunking) theo đoạn văn.

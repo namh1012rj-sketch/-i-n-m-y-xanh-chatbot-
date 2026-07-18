@@ -102,3 +102,32 @@ Phục vụ nhu cầu chốt sale nhanh và làm khách hàng hài lòng bằng 
 *   **Đầu vào (Inputs):** Không cần.
 *   **Đầu ra (Outputs):** `List[Dict[str, Any]]` - Danh sách sản phẩm có số lượng <= 0.
 *   **Thời gian chạy thực tế:** `< 0.1s`.
+
+---
+
+## 5. CÁC THUẬT TOÁN & GIẢI PHÁP TỐI ƯU TỐC ĐỘ TRUY VẤN (TÍCH HỢP CLOUD)
+Để AI Agent có thể truy xuất dữ liệu với thời gian phản hồi (latency) cực thấp và dễ dàng mở rộng (scale) trên Cloud (AWS/GCP/Azure), các tool cần được thiết kế dựa trên các thuật toán và kiến trúc sau:
+
+### 5.1. Thuật toán Tìm kiếm Vector gần đúng (Approximate Nearest Neighbor - ANN)
+*   **Thuật toán HNSW (Hierarchical Navigable Small World) / IVF (Inverted File Index):** 
+    *   **Áp dụng cho:** Các tool tìm kiếm ngữ nghĩa nhóm 1 (1.1, 1.2, 1.3, 1.4).
+    *   **Mục đích:** Thay vì dùng k-NN quét tuần tự toàn bộ database, thuật toán HNSW tìm kiếm qua đồ thị không gian nhiều chiều, giảm thời gian query từ `~0.9s` xuống `< 0.05s`.
+    *   **Triển khai Cloud:** Định cấu hình thuật toán HNSW trực tiếp trên `MongoDB Atlas Vector Search`, hoặc dùng Managed VectorDB trên Cloud như Pinecone, Zilliz Cloud (Milvus).
+*   **Hybrid Search (Thuật toán BM25 kết hợp RRF):**
+    *   **Mục đích:** Chạy song song thuật toán tìm kiếm từ khóa truyền thống (BM25) và Vector Search, sau đó dùng thuật toán Reciprocal Rank Fusion (RRF) để gộp điểm. Nó tăng độ chính xác truy vấn cho Agent mà vẫn đảm bảo tốc độ qua index.
+
+### 5.2. Thuật toán lưu trữ đệm bộ nhớ (Caching Algorithms)
+*   **Thuật toán LRU Cache (Least Recently Used):**
+    *   **Áp dụng cho:** FAQ (1.3), Exact Match & Exact Query (Nhóm 2).
+    *   **Mục đích:** Cache lại trực tiếp kết quả trả về từ DB hoặc các câu hỏi thường gặp của người dùng. Tốc độ query khi trúng cache (Cache hit) qua RAM cực kì nhanh (`< 0.01s`).
+    *   **Triển khai Cloud:** Sử dụng Amazon ElastiCache (Redis) / GCP Memorystore / Azure Cache for Redis. Viết thêm module Python kết nối vào Redis cho mọi Tool trước khi gọi xuống DB.
+
+### 5.3. Thuật toán Lập chỉ mục đa chiều (Compound B-Tree Indexing)
+*   **Mục đích:** Tối ưu hóa các toán tử tra cứu bằng Index B-Tree `O(log N)` thay vì quét tuyến tính (Collection Scan) `O(N)`.
+    *   **Áp dụng cho:** Nhóm Filter (2.3, 2.4, 2.5). Đặc biệt quan trọng cho các khoảng điều kiện như `$gte` (giá, công suất).
+    *   **Triển khai:** Khai báo cấu trúc index trực tiếp trên MongoDB Cloud theo chuẩn ESR (Equality, Sort, Range).
+
+### 5.4. Kiến trúc Bất đồng bộ (Async I/O) & Xử lý song song
+*   **Mục đích:** Rút ngắn thời gian phản hồi khi Agent sử dụng song song nhiều Tool.
+    *   **Giải pháp:** Chuyển API calls và kết nối Database của các tool hiện tại từ đồng bộ (Sync - `pymongo`, `requests`) sang bất đồng bộ (Async - `motor`, `aiohttp`).
+    *   **Triển khai Cloud:** Đóng gói (Dockerize) các Tool APIs vào Container hoặc Serverless (AWS Lambda, Cloud Run). Khi đó, các Tool hoạt động như các Microservice độc lập, scale tự động khi có lưu lượng truy vấn lớn.
