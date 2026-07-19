@@ -19,5 +19,5 @@ COPY . .
 # Expose port 8000
 EXPOSE 8000
 
-# Chạy server FastAPI bằng Uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Chạy server FastAPI bằng Uvicorn với biến môi trường PORT (cần thiết cho Cloud)
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: dmx-chatbot-web
+    env: docker
+    plan: free
+    region: singapore
+    envVars:
+      - key: FPT_API_KEY
+        sync: false # Bạn sẽ cần điền key này trực tiếp trên Dashboard của Render
