@@ -2,3 +2,8 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Ignore debug logs and local test scripts
+debug_*.txt
+test_*.py
+mock_db.json
