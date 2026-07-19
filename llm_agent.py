@@ -214,7 +214,6 @@ class DMXAgent:
                         
                     if name in func_map:
                         if iterations >= 2 and name.startswith("tool_"):
-                            yield f"\n[Hệ thống ép dừng lặp Tool ({name})]\n"
                             fallback_msg = "\nDạ, hiện tại hệ thống bên em không tìm thấy mẫu sản phẩm nào đáp ứng đúng hoàn toàn tiêu chí (hoặc mức giá) vừa rồi. Anh/chị có muốn tham khảo sang các mẫu khác hoặc điều chỉnh lại ngân sách không ạ?\n"
                             
                             # Fake stream fallback message
@@ -226,7 +225,6 @@ class DMXAgent:
                             self.history.append({"role": "assistant", "content": fallback_msg})
                             return
                         else:
-                            yield f"\n[Đang tìm kiếm... ({name})]\n"
                             tasks.append(func_map[name](**args))
                             valid_tcs.append(tc)
                     else:
