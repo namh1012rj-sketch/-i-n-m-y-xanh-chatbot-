@@ -6,4 +6,12 @@ services:
     region: singapore
     envVars:
       - key: FPT_API_KEY
-        sync: false # Bạn sẽ cần điền key này trực tiếp trên Dashboard của Render
+        sync: false
+      - key: MONGO_URI
+        sync: false
+      - key: EMBEDDING_API_URL
+        sync: false
+      - key: EMBEDDING_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
