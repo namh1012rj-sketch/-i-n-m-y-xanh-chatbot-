@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ lý AI Điện Máy Xanh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="#FACC15"/>
+                    <circle cx="8" cy="9" r="1.5" fill="#1F2937"/>
+                    <circle cx="16" cy="9" r="1.5" fill="#1F2937"/>
+                    <path d="M12 17C14.2091 17 16 15.2091 16 13H8C8 15.2091 9.79086 17 12 17Z" fill="#1F2937"/>
+                </svg>
+            </div>
+            <h1>Trợ lý AI so sánh & tư vấn sản phẩm — Điện Máy Xanh</h1>
+        </header>
+
+        <div class="chat-box" id="chat-box">
+            <!-- Initial Greeting -->
+            <div class="message ai-message">
+                <div class="message-content">
+                    <p>Chào bạn! Mình là trợ lý tư vấn của Điện Máy Xanh. Bạn đang cần tìm sản phẩm gì — máy lạnh, tủ lạnh, điện thoại, laptop hay tai nghe? Cứ mô tả nhu cầu tự nhiên, mình sẽ hỏi thêm nếu cần.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Nhập nhu cầu của bạn, ví dụ: tôi cần tủ lạnh cho gia đình 4 người, dưới 15 triệu..." autocomplete="off">
+                <button id="send-btn">Gửi</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

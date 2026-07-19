@@ -240,7 +240,7 @@ class DMXAgent:
                             return # Kết thúc generator ngay lập tức
                             
                         else:
-                            yield f"\n[Agent đang tra cứu Database ({name})]\n"
+                            yield f"\n[Đang tìm kiếm... ({name})]\n"
                             tasks.append(func_map[name](**args))
                             valid_tcs.append(tc)
                     else:

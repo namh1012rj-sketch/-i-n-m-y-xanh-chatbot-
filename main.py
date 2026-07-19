@@ -1,6 +1,7 @@
 import asyncio
 from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict
@@ -19,6 +20,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Mount static directory
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 # [CÁCH 1]: Quản lý Session In-Memory
 # Dictionary lưu trữ các object Agent, key là session_id
 # Lưu ý: Cách này sẽ mất session nếu restart server.
@@ -29,8 +33,9 @@ class ChatRequest(BaseModel):
     message: str
 
 @app.get("/")
-def health_check():
-    return {"status": "ok", "message": "Server is running"}
+def serve_index():
+    return FileResponse("static/index.html")
+
 
 @app.post("/api/chat")
 async def chat_endpoint(req: ChatRequest):
@@ -43,12 +48,9 @@ async def chat_endpoint(req: ChatRequest):
     # 2. Hàm Generator bọc lại hàm send_message_stream của Agent
     async def event_stream():
         # Duyệt qua các chunk text được sinh ra từ Agent
-        for chunk in agent.send_message_stream(req.message):
+        async for chunk in agent.send_message_stream(req.message):
             # Format trả về theo chuẩn Server-Sent Events (SSE) để frontend dễ xử lý stream
             yield f"data: {chunk}\n\n"
-            
-            # Giải phóng Event Loop một chút (vì genai sinh text có thể blocking)
-            await asyncio.sleep(0.01)
 
     # 3. Trả về StreamingResponse với chuẩn Server-Sent Events
     return StreamingResponse(event_stream(), media_type="text/event-stream")

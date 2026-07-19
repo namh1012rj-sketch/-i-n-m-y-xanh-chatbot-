@@ -1,2 +1,4 @@
-cleaned_data.json
-policy_faq.json
+.env
+__pycache__/
+*.pyc
+.DS_Store

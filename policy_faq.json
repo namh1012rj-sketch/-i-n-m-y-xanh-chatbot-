@@ -1,0 +1,315 @@
+[
+    {
+        "category": "Bảo hành",
+        "applicable_product_types": [
+            "Máy lạnh",
+            "Tủ lạnh",
+            "Máy giặt"
+        ],
+        "question": "Sản phẩm điện lạnh được bảo hành bao lâu?",
+        "policy_content": "Máy lạnh, tủ lạnh, máy giặt mua tại Điện Máy Xanh được bảo hành chính hãng 24 tháng cho thân máy. Riêng máy nén (Block) hoặc động cơ Inverter được bảo hành từ 10 - 12 năm tùy theo quy định của từng hãng (như Panasonic, LG, Samsung, Aqua).",
+        "keywords": [
+            "thời gian bảo hành",
+            "điện lạnh",
+            "inverter",
+            "máy nén",
+            "block"
+        ]
+    },
+    {
+        "category": "Bảo hành",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Có bảo hành tận nhà không hay phải mang ra siêu thị?",
+        "policy_content": "Tất cả các sản phẩm điện máy, điện lạnh và gia dụng lớn (như Tivi, Tủ lạnh, Máy lạnh, Máy giặt, Quạt điều hòa...) đều được bảo hành tận nhà. Khách hàng chỉ cần gọi tổng đài, kỹ thuật viên của hãng sẽ đến kiểm tra tận nơi trong vòng 24h - 48h.",
+        "keywords": [
+            "bảo hành tận nhà",
+            "gọi tổng đài",
+            "kiểm tra tận nơi"
+        ]
+    },
+    {
+        "category": "Bảo hành",
+        "applicable_product_types": [
+            "Điện thoại",
+            "Laptop",
+            "Máy tính bảng",
+            "Đồng hồ thông minh"
+        ],
+        "question": "Sản phẩm công nghệ viễn thông bảo hành như thế nào?",
+        "policy_content": "Điện thoại, Laptop, Tablet, Smartwatch được bảo hành chính hãng 12 tháng (một số dòng có thể lên 24 tháng) tại các trung tâm bảo hành của hãng. Điện Máy Xanh hỗ trợ tiếp nhận sản phẩm và gửi đi bảo hành giúp khách hàng hoàn toàn miễn phí tại bất kỳ siêu thị nào trên toàn quốc.",
+        "keywords": [
+            "viễn thông",
+            "laptop",
+            "điện thoại",
+            "gửi bảo hành",
+            "12 tháng"
+        ]
+    },
+    {
+        "category": "Bảo hành",
+        "applicable_product_types": [
+            "Phụ kiện"
+        ],
+        "question": "Phụ kiện như sạc, cáp, tai nghe, sạc dự phòng bảo hành bao lâu?",
+        "policy_content": "Các sản phẩm phụ kiện (Sạc, cáp, tai nghe, sạc dự phòng, chuột, bàn phím...) được bảo hành 1 đổi 1 trong vòng 1 năm nếu có lỗi kỹ thuật từ nhà sản xuất.",
+        "keywords": [
+            "phụ kiện",
+            "sạc dự phòng",
+            "1 đổi 1",
+            "tai nghe",
+            "cáp sạc"
+        ]
+    },
+    {
+        "category": "Bảo hành",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Lỗi do người dùng như rơi vỡ, vô nước có được bảo hành không?",
+        "policy_content": "Không. Các trường hợp lỗi do người dùng như rơi vỡ, cấn móp, vô nước, chập cháy do nguồn điện không ổn định, côn trùng xâm nhập, tự ý sửa chữa sẽ bị từ chối bảo hành miễn phí. Khách hàng sẽ phải chịu chi phí sửa chữa theo báo giá của hãng.",
+        "keywords": [
+            "từ chối bảo hành",
+            "rơi vỡ",
+            "vô nước",
+            "chập cháy",
+            "lỗi người dùng"
+        ]
+    },
+    {
+        "category": "Trả góp",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Thủ tục mua trả góp qua công ty tài chính cần những gì?",
+        "policy_content": "Chỉ cần Căn cước công dân (CCCD) gắn chip. Không cần sổ hộ khẩu. Độ tuổi tham gia từ 18 - 60 tuổi. Thời gian duyệt hồ sơ thường chỉ từ 15 - 30 phút. Khách hàng có thể cần trả trước từ 10% - 50% giá trị sản phẩm tùy thuộc vào gói vay.",
+        "keywords": [
+            "thủ tục",
+            "công ty tài chính",
+            "cccd",
+            "độ tuổi",
+            "duyệt hồ sơ"
+        ]
+    },
+    {
+        "category": "Trả góp",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Trả góp qua thẻ tín dụng có mất lãi không? Cần điều kiện gì?",
+        "policy_content": "Trả góp qua thẻ tín dụng (Visa, Mastercard, JCB) được áp dụng lãi suất 0%. Khách hàng không cần trả trước và không cần làm hồ sơ. Tuy nhiên, có thể sẽ phát sinh phí chuyển đổi trả góp tùy theo quy định của từng ngân hàng. Hạn mức thẻ phải lớn hơn giá trị thanh toán.",
+        "keywords": [
+            "thẻ tín dụng",
+            "visa",
+            "mastercard",
+            "0%",
+            "không trả trước",
+            "phí chuyển đổi"
+        ]
+    },
+    {
+        "category": "Trả góp",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Sinh viên chưa đi làm có được mua trả góp không?",
+        "policy_content": "Sinh viên từ đủ 18 tuổi có thể mua trả góp bằng CCCD. Một số công ty tài chính có gói vay ưu đãi dành riêng cho sinh viên với yêu cầu cung cấp thêm Thẻ sinh viên hoặc Biên lai học phí.",
+        "keywords": [
+            "sinh viên",
+            "thẻ sinh viên",
+            "ưu đãi",
+            "chưa đi làm"
+        ]
+    },
+    {
+        "category": "Trả góp",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Đang có nợ xấu thì có mua trả góp được không?",
+        "policy_content": "Nếu khách hàng đang có nợ xấu (từ nhóm 3 trở lên trên hệ thống CIC), các công ty tài chính sẽ từ chối hỗ trợ vay trả góp. Khách hàng nên thanh toán hết dư nợ cũ và đợi hệ thống cập nhật trước khi làm hồ sơ mới.",
+        "keywords": [
+            "nợ xấu",
+            "cic",
+            "từ chối",
+            "dư nợ"
+        ]
+    },
+    {
+        "category": "Giao hàng & Lắp đặt",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Điện máy xanh giao hàng trong bán kính bao nhiêu km? Có tính phí không?",
+        "policy_content": "Giao hàng tận nơi miễn phí trong bán kính 50km tính từ siêu thị có hàng. Ngoài 50km, cước phí vận chuyển sẽ được tính thêm dựa trên khoảng cách thực tế (nhân viên sẽ báo chi tiết khi chốt đơn).",
+        "keywords": [
+            "khoảng cách giao hàng",
+            "bán kính",
+            "50km",
+            "phí vận chuyển"
+        ]
+    },
+    {
+        "category": "Giao hàng & Lắp đặt",
+        "applicable_product_types": [
+            "Máy lạnh"
+        ],
+        "question": "Mua máy lạnh thì phí lắp đặt và vật tư tính thế nào?",
+        "policy_content": "Miễn phí 100% công lắp đặt máy lạnh. Phí vật tư tính theo thực tế sử dụng: Ống đồng Thái Lan giá từ 170.000đ - 190.000đ/mét tùy công suất máy, Eke đỡ cục nóng 120.000đ/bộ, Dây điện 12.000đ/mét, CB 100.000đ/cái. Ống đồng lắp thiểu từ 3m để đảm bảo máy vận hành êm ái.",
+        "keywords": [
+            "phí lắp đặt",
+            "vật tư",
+            "ống đồng",
+            "eke",
+            "dây điện",
+            "cb"
+        ]
+    },
+    {
+        "category": "Giao hàng & Lắp đặt",
+        "applicable_product_types": [
+            "Tivi"
+        ],
+        "question": "Giao Tivi có khoan tường gắn khung treo không? Tính phí thế nào?",
+        "policy_content": "Giao hàng Tivi có hỗ trợ khoan tường lắp đặt. Công lắp ráp để bàn là miễn phí. Nếu khách hàng muốn treo tường, chỉ cần thanh toán tiền vật tư Giá treo (khung treo phẳng/gật gù) theo giá niêm yết của siêu thị, công khoan tường là hoàn toàn miễn phí.",
+        "keywords": [
+            "treo tường",
+            "giá treo",
+            "tivi",
+            "khoan tường",
+            "khung treo"
+        ]
+    },
+    {
+        "category": "Giao hàng & Lắp đặt",
+        "applicable_product_types": [
+            "Tủ lạnh",
+            "Máy giặt"
+        ],
+        "question": "Nhà ở chung cư cao tầng hoặc hẻm nhỏ xe không vào được thì có hỗ trợ không?",
+        "policy_content": "Điện Máy Xanh hỗ trợ mang hàng lên tận phòng đối với chung cư có thang máy. Đối với nhà trọ lên lầu bằng thang bộ hoặc hẻm nhỏ, xe tải không vào được, nhân viên sẽ dùng xe đẩy hoặc khiêng tay để đưa sản phẩm vào tận nhà hoàn toàn miễn phí.",
+        "keywords": [
+            "chung cư",
+            "hẻm nhỏ",
+            "thang bộ",
+            "khiêng tay",
+            "tận phòng"
+        ]
+    },
+    {
+        "category": "Đổi trả",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Hàng mua về bị lỗi thì có được đổi mới không?",
+        "policy_content": "Áp dụng chính sách 'Lỗi là đổi mới trong 30 ngày' (đối với điện thoại, tablet, laptop, smartwatch là 30 ngày tại siêu thị, điện lạnh gia dụng lớn là 30 ngày tận nhà). Lỗi phải được xác nhận là lỗi phần cứng từ nhà sản xuất.",
+        "keywords": [
+            "đổi mới",
+            "30 ngày",
+            "lỗi nhà sản xuất",
+            "phần cứng"
+        ]
+    },
+    {
+        "category": "Đổi trả",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Mua hàng xong không ưng ý, muốn trả lại lấy tiền thì bị trừ bao nhiêu %?",
+        "policy_content": "Trong tháng đầu tiên, nếu sản phẩm không lỗi nhưng khách hàng muốn trả hàng hoàn tiền, mức phí thu hồi là 20% giá trị trên hóa đơn. Từ tháng thứ 2 trở đi, mỗi tháng cộng thêm 10% phí. Sản phẩm phải còn nguyên vẹn, đủ hộp và phụ kiện đi kèm.",
+        "keywords": [
+            "trả hàng",
+            "hoàn tiền",
+            "phí thu hồi",
+            "không lỗi",
+            "20%"
+        ]
+    },
+    {
+        "category": "Đổi trả",
+        "applicable_product_types": [
+            "Điện thoại",
+            "Laptop"
+        ],
+        "question": "Mua điện thoại trả góp bị lỗi đổi máy mới thì hợp đồng trả góp có bị ảnh hưởng không?",
+        "policy_content": "Việc đổi máy mới do lỗi kỹ thuật trong 30 ngày đầu sẽ không làm thay đổi hợp đồng trả góp. Khách hàng vẫn thanh toán các kỳ hạn bình thường với số IMEI/Serial mới sẽ được siêu thị cập nhật lại trên hệ thống bảo hành.",
+        "keywords": [
+            "đổi trả góp",
+            "imei",
+            "hợp đồng trả góp"
+        ]
+    },
+    {
+        "category": "Tư vấn",
+        "applicable_product_types": [
+            "Máy lạnh"
+        ],
+        "question": "Máy lạnh Inverter khác gì máy thường? Có thực sự tiết kiệm điện không?",
+        "policy_content": "Máy lạnh Inverter sử dụng máy nén biến tần, giúp duy trì nhiệt độ ổn định mà không phải bật/tắt liên tục như máy thường. Nếu sử dụng trên 6-8 tiếng/ngày, máy Inverter có thể tiết kiệm từ 30% - 50% điện năng so với máy thường và vận hành êm ái hơn.",
+        "keywords": [
+            "inverter",
+            "máy thường",
+            "tiết kiệm điện",
+            "biến tần"
+        ]
+    },
+    {
+        "category": "Tư vấn",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Mua hàng Online trên Website có rẻ hơn ra trực tiếp siêu thị không?",
+        "policy_content": "Thường xuyên có các chương trình 'Giá Rẻ Quá', 'Flash Sale' hoặc 'Online Giá Rẻ Hơn' áp dụng riêng cho khách đặt hàng qua Website. Khách hàng có thể đặt Online để giữ giá ưu đãi, sau đó ra siêu thị nhận máy hoặc yêu cầu giao tận nhà.",
+        "keywords": [
+            "mua online",
+            "website",
+            "giá rẻ hơn",
+            "flash sale"
+        ]
+    },
+    {
+        "category": "Tư vấn",
+        "applicable_product_types": [
+            "Máy giặt"
+        ],
+        "question": "Nên mua máy giặt cửa trên (lồng đứng) hay cửa trước (lồng ngang)?",
+        "policy_content": "Máy giặt cửa trước (lồng ngang) giặt sạch hơn, bảo vệ quần áo tốt hơn (ít xoắn rối), tiết kiệm nước và thường có nhiều công nghệ cao cấp (giặt hơi nước, diệt khuẩn). Máy cửa trên (lồng đứng) có ưu điểm là giá rẻ, thiết kế nắp mở phía trên dễ bỏ thêm đồ và phù hợp không gian nhỏ hẹp.",
+        "keywords": [
+            "cửa trước",
+            "cửa trên",
+            "lồng đứng",
+            "lồng ngang",
+            "so sánh"
+        ]
+    },
+    {
+        "category": "Tư vấn",
+        "applicable_product_types": [
+            "Tủ lạnh"
+        ],
+        "question": "Cách chọn dung tích tủ lạnh phù hợp với số người trong gia đình?",
+        "policy_content": "Bình quân mỗi người cần khoảng 50-70 Lít dung tích. Gia đình 2-3 người phù hợp tủ 150-250 Lít. Gia đình 3-4 người chọn tủ 300-400 Lít. Gia đình trên 5 người hoặc có nhu cầu tích trữ nhiều thực phẩm nên chọn tủ trên 400 Lít (như dòng Side by side hoặc Multidoor).",
+        "keywords": [
+            "dung tích",
+            "số người",
+            "side by side",
+            "lít",
+            "chọn tủ"
+        ]
+    },
+    {
+        "category": "Tư vấn",
+        "applicable_product_types": [
+            "Tất cả"
+        ],
+        "question": "Hàng trưng bày là gì? Có nên mua không? Bảo hành thế nào?",
+        "policy_content": "Hàng trưng bày là hàng chính hãng được đặt trên kệ siêu thị để khách trải nghiệm. Thường có giá rẻ hơn từ 20% - 40%. Sản phẩm có thể bị trầy xước nhẹ hoặc thiếu thùng hộp nhưng vẫn đầy đủ chức năng. Hàng trưng bày vẫn được bảo hành chính hãng từ 1-12 tháng tùy hãng.",
+        "keywords": [
+            "hàng trưng bày",
+            "trầy xước",
+            "giá rẻ",
+            "trải nghiệm"
+        ]
+    }
+]
