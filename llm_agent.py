@@ -174,7 +174,7 @@ class DMXAgent:
                     tools=OPENAI_TOOLS,
                     stream=False,
                     temperature=0.3,
-                    max_tokens=800
+                    max_tokens=4000
                 )
             except Exception as e:
                 yield f"\n[Lỗi kết nối FPT API: {str(e)}]\n"
