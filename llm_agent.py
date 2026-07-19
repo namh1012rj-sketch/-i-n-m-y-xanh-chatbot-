@@ -167,12 +167,12 @@ class DMXAgent:
         iterations = 0
         while iterations < 5:
             try:
-                # LLM API call
-                response_stream = client.chat.completions.create(
+                # LLM API call - Dùng stream=False do FPT API/DeepSeek bị lỗi không trả tool_calls khi stream=True
+                response = client.chat.completions.create(
                     model=self.model_name,
                     messages=self.history,
                     tools=OPENAI_TOOLS,
-                    stream=True,
+                    stream=False,
                     temperature=0.3,
                     max_tokens=800
                 )
@@ -180,47 +180,31 @@ class DMXAgent:
                 yield f"\n[Lỗi kết nối FPT API: {str(e)}]\n"
                 break
             
-            full_text = ""
-            tool_calls_accumulator = {}
+            msg = response.choices[0].message
             
-            for chunk in response_stream:
-                if len(chunk.choices) == 0:
-                    continue
-                delta = chunk.choices[0].delta
-                
-                # Stream chữ ra Frontend
-                if delta.content:
-                    full_text += delta.content
-                    yield delta.content
-                    
-                # Góp nhặt thông tin Tool Call
-                if delta.tool_calls:
-                    for tc in delta.tool_calls:
-                        if tc.index not in tool_calls_accumulator:
-                            tool_calls_accumulator[tc.index] = {
-                                "id": tc.id,
-                                "type": "function",
-                                "function": {"name": tc.function.name, "arguments": tc.function.arguments or ""}
-                            }
-                        else:
-                            if tc.function.arguments:
-                                tool_calls_accumulator[tc.index]["function"]["arguments"] += tc.function.arguments
-
-            if tool_calls_accumulator:
+            if msg.tool_calls:
                 # LLM đã gọi tool
-                tool_calls = list(tool_calls_accumulator.values())
+                tool_calls_data = []
+                for tc in msg.tool_calls:
+                    tool_calls_data.append({
+                        "id": tc.id,
+                        "type": "function",
+                        "function": {
+                            "name": tc.function.name,
+                            "arguments": tc.function.arguments
+                        }
+                    })
                 
-                # Lưu vào history
-                assistant_msg = {"role": "assistant", "tool_calls": tool_calls}
-                if full_text:
-                    assistant_msg["content"] = full_text
+                assistant_msg = {"role": "assistant", "tool_calls": tool_calls_data}
+                if msg.content:
+                    assistant_msg["content"] = msg.content
                 self.history.append(assistant_msg)
                 
                 func_map = {f.__name__: f for f in ALL_TOOLS}
                 tasks = []
                 valid_tcs = []
                 
-                for tc in tool_calls:
+                for tc in tool_calls_data:
                     name = tc["function"]["name"]
                     args_str = tc["function"]["arguments"]
                     try:
@@ -231,14 +215,16 @@ class DMXAgent:
                     if name in func_map:
                         if iterations >= 2 and name.startswith("tool_"):
                             yield f"\n[Hệ thống ép dừng lặp Tool ({name})]\n"
-                            
-                            # Tự động chèn câu trả lời cứu vãn và ép ngắt luồng hoàn toàn
                             fallback_msg = "\nDạ, hiện tại hệ thống bên em không tìm thấy mẫu sản phẩm nào đáp ứng đúng hoàn toàn tiêu chí (hoặc mức giá) vừa rồi. Anh/chị có muốn tham khảo sang các mẫu khác hoặc điều chỉnh lại ngân sách không ạ?\n"
-                            yield fallback_msg
+                            
+                            # Fake stream fallback message
+                            chunk_size = 5
+                            for i in range(0, len(fallback_msg), chunk_size):
+                                yield fallback_msg[i:i+chunk_size]
+                                await asyncio.sleep(0.02)
+                                
                             self.history.append({"role": "assistant", "content": fallback_msg})
-                            
-                            return # Kết thúc generator ngay lập tức
-                            
+                            return
                         else:
                             yield f"\n[Đang tìm kiếm... ({name})]\n"
                             tasks.append(func_map[name](**args))
@@ -264,7 +250,14 @@ class DMXAgent:
                 iterations += 1
             else:
                 # Trả lời bình thường bằng chữ
+                full_text = msg.content or ""
                 self.history.append({"role": "assistant", "content": full_text})
+                
+                # Giả lập streaming (Fake Stream) ra Frontend để giữ nguyên trải nghiệm UI mượt mà
+                chunk_size = 3
+                for i in range(0, len(full_text), chunk_size):
+                    yield full_text[i:i+chunk_size]
+                    await asyncio.sleep(0.01) # Tốc độ gõ 10ms/3 ký tự
                 break
                 
         if iterations >= 5:
