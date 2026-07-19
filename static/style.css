@@ -164,3 +164,63 @@ body {
     cursor: not-allowed;
     transform: none;
 }
+
+/* Markdown Styling for AI Messages */
+.ai-message .message-content a {
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 6px 12px;
+    background-color: #eff6ff;
+    color: #2563eb;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #bfdbfe;
+    transition: all 0.2s ease;
+}
+
+.ai-message .message-content a:hover {
+    background-color: #dbeafe;
+    border-color: #93c5fd;
+    text-decoration: underline;
+}
+
+.ai-message .message-content strong {
+    color: #111827;
+    font-weight: 600;
+}
+
+.ai-message .message-content ul, 
+.ai-message .message-content ol {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    padding-left: 24px;
+}
+
+.ai-message .message-content li {
+    margin-bottom: 6px;
+}
+
+.ai-message .message-content p {
+    margin-bottom: 10px;
+}
+
+.ai-message .message-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+.ai-message .message-content th,
+.ai-message .message-content td {
+    border: 1px solid #e5e7eb;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.ai-message .message-content th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}

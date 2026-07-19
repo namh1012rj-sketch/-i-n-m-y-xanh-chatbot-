@@ -10,14 +10,7 @@ function scrollToBottom() {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Chuyển markdown cơ bản (in đậm, danh sách) thành HTML
-function parseMarkdown(text) {
-    let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-    html = html.replace(/\n/g, '<br>');
-    return html;
-}
-
+// Xóa hàm parseMarkdown cũ vì đã dùng marked.js
 function appendMessage(content, sender) {
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('message');
@@ -93,8 +86,8 @@ async function sendMessage() {
                     if (data === '[DONE]') continue; // Nếu server gửi [DONE]
                     
                     fullResponse += data;
-                    // Tạm thời render thẳng, có thể replace \n thành <br>
-                    aiContentDiv.innerHTML = parseMarkdown(fullResponse);
+                    // Render bằng marked.js
+                    aiContentDiv.innerHTML = marked.parse(fullResponse);
                     scrollToBottom();
                 }
             }
