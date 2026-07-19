@@ -86,8 +86,9 @@ async function sendMessage() {
                     if (data === '[DONE]') continue; // Nếu server gửi [DONE]
                     
                     fullResponse += data;
-                    // Render bằng marked.js
-                    aiContentDiv.innerHTML = marked.parse(fullResponse);
+                    // Chuyển lại \\n thành \n thực tế để marked.js render đúng (do server đã replace \n thành \\n để fix lỗi SSE)
+                    const decodedText = fullResponse.replace(/\\n/g, '\n');
+                    aiContentDiv.innerHTML = marked.parse(decodedText);
                     scrollToBottom();
                 }
             }

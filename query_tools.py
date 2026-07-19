@@ -103,9 +103,15 @@ class AsyncQueryEngine:
             "phụ kiện": "Phụ kiện", "ốp lưng": "Phụ kiện ốp lưng",
             "máy giặt": "Máy giặt", "máy nước nóng": "Máy nước nóng"
         }
-        category = cat_map.get(category.lower().strip(), category.strip())
+        mapped_cat = cat_map.get(category.lower().strip(), category.strip())
         all_cats = set(p.get("category", "") for p in self.preprocessor.products if p.get("category"))
-        return next((c for c in all_cats if category.lower() in c.lower()), category)
+        
+        # Prioritize exact match
+        for c in all_cats:
+            if mapped_cat.lower() == c.lower():
+                return c
+                
+        return next((c for c in all_cats if mapped_cat.lower() in c.lower()), mapped_cat)
 
     # ==================== 1. CÁC TOOL TÌM KIẾM NGỮ NGHĨA (HYBRID & VECTOR) ====================
 
@@ -128,7 +134,7 @@ class AsyncQueryEngine:
                 # CÁCH 2: ÁP DỤNG PRE-FILTERING (LỌC TRƯỚC KHI TÌM KIẾM VECTOR HNSW)
                 filter_doc = {"category": category}
                 if budget:
-                    filter_doc["sale_price"] = {"$lte": budget}
+                    filter_doc["sale_price"] = {"$lte": budget * 1.15}
                 
                 if category == "Máy lạnh" and room_area:
                     if room_area <= 15: filter_doc["specs.room_area_numeric"] = {"$lte": 15}
@@ -183,10 +189,27 @@ class AsyncQueryEngine:
                     results.sort(key=lambda x: x[1], reverse=True)
                     return results[:5]
                 except Exception as e:
-                    print(f"[Vector Search Fallback] Lỗi Atlas Async: {e}. Chuyển sang Numpy/Local Search.")
+                    print(f"[Vector Search Fallback] Lỗi Atlas Async: {e}. Chuyển sang tìm kiếm cơ bản (MongoDB).")
+                    mongo_query = {"category": category}
+                    if budget: mongo_query["sale_price"] = {"$lte": budget * 1.15}
+                    
+                    # Sort DESCENDING by sale_price to get phones closest to budget, rather than cheapest
+                    sort_order = [("sale_price", -1)] if budget else None
+                    db_candidates = await self.async_db["products"].find(mongo_query, {"_id": 0, "embedding": 0}).sort(sort_order).to_list(length=15) if sort_order else await self.async_db["products"].find(mongo_query, {"_id": 0, "embedding": 0}).to_list(length=15)
+                    
+                    results = []
+                    for p in db_candidates:
+                        if category == "Máy lạnh" and room_area:
+                            capacity = p.get("specs", {}).get("room_area", "")
+                            if "Dưới 15" in capacity and room_area > 15: continue
+                            if "15 đến 20" in capacity and (room_area < 15 or room_area > 20): continue
+                            if "20 đến 30" in capacity and (room_area < 20 or room_area > 30): continue
+                        results.append((p, 1.0))
+                    
+                    return results[:5]
             else:
                 mongo_query = {"category": category}
-                if budget: mongo_query["sale_price"] = {"$lte": budget}
+                if budget: mongo_query["sale_price"] = {"$lte": budget * 1.15}
                 db_candidates = await self.async_db["products"].find(mongo_query, {"_id": 0, "embedding": 0}).to_list(length=100)
                 for p in db_candidates:
                     if category == "Máy lạnh" and room_area:
@@ -202,7 +225,7 @@ class AsyncQueryEngine:
         if not candidates:
             for idx, p in enumerate(self.preprocessor.products):
                 if p.get("category") != category: continue
-                if budget and p.get("sale_price", 0) > budget: continue
+                if budget and p.get("sale_price", 0) > budget * 1.15: continue
                 if category == "Máy lạnh" and room_area:
                     capacity = p.get("specs", {}).get("room_area", "")
                     if "Dưới 15" in capacity and room_area > 15: continue

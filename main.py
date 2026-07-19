@@ -50,7 +50,9 @@ async def chat_endpoint(req: ChatRequest):
         # Duyệt qua các chunk text được sinh ra từ Agent
         async for chunk in agent.send_message_stream(req.message):
             # Format trả về theo chuẩn Server-Sent Events (SSE) để frontend dễ xử lý stream
-            yield f"data: {chunk}\n\n"
+            # Xử lý an toàn nếu chunk có chứa ký tự xuống dòng
+            chunk_safe = chunk.replace('\n', '\\n')
+            yield f"data: {chunk_safe}\n\n"
 
     # 3. Trả về StreamingResponse với chuẩn Server-Sent Events
     return StreamingResponse(event_stream(), media_type="text/event-stream")
